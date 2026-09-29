@@ -1,92 +1,43 @@
-# -Pneumonia-Detection-Using-CNN
-Pneumonia is a lung infection that can be dangerous if not detected early. Chest X-ray images  are commonly used for diagnosis, but manual examination can be slow and depends on  medical expertise. Convolutional Neural Networks (CNNs) are well suited for this task because  they can automatically learn important visual features from images
-# Problem Definition
-Task Type
-Image Classification
-Objective
-Learn visual patterns from images
-Classify images into predefined categories
+# Pneumonia Detection Using CNN
 
-Why CNN?
+An image-classification project that explores convolutional neural networks for classifying chest X-ray images.
 
-Automatic feature extraction from images
+## Problem
 
-Parameter sharing reduces complexity
+Chest X-rays are commonly used when evaluating pneumonia. This project focuses on learning visual patterns from labeled images and classifying them into predefined categories.
 
-Excellent performance on visual data
+## Pipeline
 
-# Dataset
+1. Organize images by class.
+2. Resize and normalize images.
+3. Split data into training, validation, and test sets.
+4. Optionally apply augmentation such as rotation, flipping, and zooming.
+5. Train a convolutional neural network.
+6. Evaluate the model on unseen data.
 
-Image dataset organized by class folders
+## Example CNN Structure
 
-Images resized and normalized before training
-
-Train / validation / test split applied
-
-# Data Preprocessing
-
-Image resizing to fixed dimensions
-
-Pixel normalization
-
-Optional data augmentation:
-
-Rotation
-
-Flipping
-
-Zooming
-
-# CNN Architecture (Example)
-Input Image
-→ Conv Layer + ReLU
+```text
+Input
+→ Convolution + ReLU
 → Max Pooling
-→ Conv Layer + ReLU
+→ Convolution + ReLU
 → Max Pooling
 → Flatten
 → Fully Connected Layer
-→ Output Layer (Softmax / Sigmoid)
+→ Output
+```
 
-# Training Process
+## Evaluation
 
-Loss Function:
+- Accuracy
+- Loss curves
+- Confusion matrix
+- Test-set performance
+- Sample predictions
 
-Binary Cross-Entropy or Categorical Cross-Entropy
+## Technologies
 
-Optimizer:
+Python, TensorFlow/Keras or PyTorch, NumPy, Matplotlib.
 
-Adam / SGD
-
-Batch-based training
-
-Epoch-based learning
-
-# Model Evaluation
-
-Accuracy
-
-Loss curves
-
-Confusion matrix
-
-Performance on unseen test images
-
-# Visualizations
-
-Training vs validation loss
-
-Training vs validation accuracy
-
-Sample predictions
-
-Filter and feature map visualization (optional)
-
-# Technologies
-
-Python 3
-
-TensorFlow / Keras or PyTorch
-
-NumPy
-
-Matplotlib
+> This repository is an educational machine-learning project and is not a clinical diagnostic system.
